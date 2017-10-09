@@ -5,7 +5,7 @@ An executor which creates execution by spawning new processes
 
 `new_process_executor` can create one-way and two-way execution in a separate, newly-created process:
 
-{{{
+```
 #include <iostream>
 #include <cassert>
 
@@ -39,12 +39,11 @@ int main()
 
   std::cout << "OK" << std::endl;
 }
-
-}}}
+```
 
 Program output:
 
-{{{
+```
 $ clang -std=c++11 demo.cpp -lstdc++
 $ ./a.out 
 main() called in process 18784
@@ -52,5 +51,5 @@ foo() called in process 18785
 bar() called in process 18786
 Received result 13 from another process.
 OK
-}}}
+```
 
