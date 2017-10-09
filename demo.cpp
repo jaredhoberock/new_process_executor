@@ -25,7 +25,9 @@ int main()
 
   // call bar() in a newly-created process
   interprocess_future<int> future = exec.twoway_execute(bar);
-  assert(future.get() == 13);
+  int result = future.get();
+  std::cout << "Received result " << result << " from another process." << std::endl;
+  assert(result == 13);
 
   std::cout << "OK" << std::endl;
 }
