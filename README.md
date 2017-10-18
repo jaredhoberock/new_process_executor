@@ -5,7 +5,7 @@ An executor which creates execution by spawning new processes
 
 `new_process_executor` can create one-way and two-way execution in a separate, newly-created process:
 
-```
+```c++
 #include <iostream>
 #include <cassert>
 
