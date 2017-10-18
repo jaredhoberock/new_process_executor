@@ -49,7 +49,7 @@ int main()
   }
   catch(interprocess_exception e)
   {
-    std::cout << "Receivied exception [" << e.what() << "] from another process." << std::endl;
+    std::cout << "Received exception [" << e.what() << "] from another process." << std::endl;
   }
 
   std::cout << "OK" << std::endl;

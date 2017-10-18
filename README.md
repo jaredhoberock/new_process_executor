@@ -55,22 +55,24 @@ int main()
   }
   catch(interprocess_exception e)
   {
-    std::cout << "Receivied exception [" << e.what() << "] from another process." << std::endl;
+    std::cout << "Received exception [" << e.what() << "] from another process." << std::endl;
   }
 
   std::cout << "OK" << std::endl;
 }
 ```
 
-Program output:
+Example program output:
 
 ```
 $ clang -std=c++11 demo.cpp -lstdc++
 $ ./a.out 
-main() called in process 18784
-foo() called in process 18785
-bar() called in process 18786
+main() called in process 5901
+foo() called in process 5902
+bar() called in process 5903
 Received result 13 from another process.
+baz() called in process 5904
+Received exception [Exception in baz() in process 5904] from another process.
 OK
 ```
 
