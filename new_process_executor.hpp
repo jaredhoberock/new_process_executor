@@ -118,7 +118,7 @@ class process_context
       // create an active_message out of f
       active_message message(decay_copy(std::forward<Function>(f)));
 
-      // make a copy of this process's environment and set the variable ALTERNATE_MAIN_ACTIVE_MESSAGE to contain serialized message
+      // make a copy of this process's environment and set a variable to contain the serialized active message
       auto spawnee_environment = this_process::environment();
       set_variable(spawnee_environment, "EXECUTE_ACTIVE_MESSAGE_BEFORE_MAIN", to_string(message));
       auto spawnee_environment_view = environment_view(spawnee_environment);
